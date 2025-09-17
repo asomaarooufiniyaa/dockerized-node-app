@@ -1,0 +1,10 @@
+services:
+    node:
+      build: 
+        context: .
+        args:
+          node-env: production
+      environment: 
+        - node_env=production
+      command:  node index.js
+

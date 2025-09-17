@@ -1,0 +1,21 @@
+services:
+  node:
+    build: .
+    ports:
+      - "1025:1025"
+    environment:
+      - PORT=1025
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=aso
+      - MONGO_INITDB_ROOT_PASSWORD=aso20017701
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-db:
