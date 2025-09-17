@@ -67,6 +67,18 @@ docker run -p 3000:3000 mynodeapp
 
 ---
 
+👤 Author
+
+asomaarooufiniyaa
+
+📧 Email: asomaarooufiniyaa@gmail.com
+
+linkdin: https://www.linkedin.com/in/asomaaroufiniyaa/
+
+🌍 GitHub: asomaarooufiniyaa
+
+---
+
 ## 🤝 Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
