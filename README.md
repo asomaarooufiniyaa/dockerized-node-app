@@ -54,7 +54,7 @@ npm run dev
 
 ```bash
 docker build -t mynodeapp .
-docker run -p 3000:3000 mynodeapp
+docker run -p 1025:1025 mynodeapp
 ```
 
 ---
