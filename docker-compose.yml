@@ -5,9 +5,12 @@ services:
       - "1025:1025"
     environment:
       - PORT=1025
+      - MONGO_IP=mongo
+      - MONGO_PORT=27017
+      - MONGO_USER=aso
+      - MONGO_PASSWORD=aso20017701
     depends_on:
       - mongo
-
   mongo:
     image: mongo:6
     restart: always

@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const config = require("./config/config");
+
 const app = express();
 
-const mongoUrl = "mongodb://aso:aso20017701@mongo:27017/?authSource=admin";
+const mongoUrl = `mongodb://${config.mongo_user}:${config.mongo_password}@${config.mongo_ip}:${config.mongo_port}/?authSource=admin`;
 
 const connectWithRetry = () => {
   mongoose.connect(mongoUrl)
