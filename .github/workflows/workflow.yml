@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: docker build 
-          run: docker build -t docker.io/asomaaroufiniyaa/node-app:latest
+          run: docker build -t docker.io/asomaaroufiniyaa/node-app:latest .
 
         - name: docker login
           run: docker login --username=asomaaroufiniyaa   --password=Aso#20017701
