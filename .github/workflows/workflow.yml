@@ -12,7 +12,7 @@ jobs:
           run: docker build -t docker.io/asomaaroufiniyaa/node-app:latest .
 
         - name: docker login
-          run: docker login --username=asomaaroufiniyaa   --password=Aso#20017701
+          run: docker login --username=asomaaroufiniyaa   --password=aso20017701
 
         - name: docker publish
           run: docker push docker.io/asomaaroufiniyaa/node-app:latest
