@@ -21,4 +21,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: docker Run
-          run: docker compose run -p 1025:1025 -d docker.io/asomaaroufiniyaa/node-app:latest
+          run: |
+            docker pull docker.io/asomaaroufiniyaa/node-app:latest
+            docker compose -p 1025:1025 up -d
