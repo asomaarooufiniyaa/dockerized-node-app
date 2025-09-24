@@ -22,3 +22,10 @@ jobs:
       - name: docker publish
         run: docker push ${{ env.docker_registery }}/${{ vars.DOCKER_USERNAME }}/${{ env.docker_image }}:latest
 
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker Run
+        run: 
+          docker run -p 1025:1025 -d docker.io/asomaaroufiniyaa/node-app:latest
