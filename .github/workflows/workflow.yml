@@ -22,5 +22,6 @@ jobs:
         steps:
         - name: docker Run
           run: |
+            cd $GITHUB_WORKSPACE
             docker pull docker.io/asomaaroufiniyaa/node-app:latest
-            docker compose -f ../docker-compose.yml up -d
+            docker compose up -d
