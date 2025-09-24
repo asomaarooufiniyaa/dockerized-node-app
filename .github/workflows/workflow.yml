@@ -1,0 +1,22 @@
+name: my node.js app workflow
+
+on: push
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+        - name: docker build 
+          run: docker build -t docker.io/asomaaroufiniyaa/node-app:latest
+
+        - name: docker login
+          run: docker login --username=asomaaroufiniyaa   --password=Aso#20017701
+
+        - name: docker publish
+          run: docker push docker.io/asomaaroufiniyaa/node-app:latest
+    deploy:
+        needs: docker
+        runs-on: ubuntu-latest
+        steps:
+        - name: docker Run
+          run: docker compose run -p 1025:1025 -d docker.io/asomaaroufiniyaa/node-app:latest
